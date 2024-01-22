@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plannerBenchmark xmlns="https://timefold.ai/xsd/benchmark" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="https://timefold.ai/xsd/benchmark https://timefold.ai/xsd/benchmark/benchmark.xsd">
+    <benchmarkDirectory>local/benchmarkReport</benchmarkDirectory>
+
+    <inheritedSolverBenchmark>
+        <solver>
+            <environmentMode>REPRODUCIBLE</environmentMode>
+            <!-- Define the model -->
+            <solutionClass>problem.loc.facility.domain.FacilitySolution</solutionClass>
+            <entityClass>problem.loc.facility.domain.Storage</entityClass>
+            <entityClass>problem.loc.facility.domain.Retail</entityClass>
+
+            <!-- Define the score function -->
+            <scoreDirectorFactory>
+                <constraintProviderClass>problem.loc.facility.solver.StreamCalculator</constraintProviderClass>
+            </scoreDirectorFactory>
+            <termination>
+                <secondsSpentLimit>1</secondsSpentLimit>
+            </termination>
+
+            <constructionHeuristic />
+        </solver>
+        <problemBenchmarks>
+            <solutionFileIOClass>problem.loc.facility.domain.FacilitySolutionJsonIO</solutionFileIOClass>
+            <writeOutputSolutionEnabled>true</writeOutputSolutionEnabled>
+            <inputSolutionFile>data/classExample5.json</inputSolutionFile>
+            <inputSolutionFile>data/classExample50.json</inputSolutionFile>
+            <inputSolutionFile>data/classExample100.json</inputSolutionFile>
+            <inputSolutionFile>data/classExample150.json</inputSolutionFile>
+        </problemBenchmarks>
+        <subSingleCount>3</subSingleCount>
+    </inheritedSolverBenchmark>
+
+    <solverBenchmark>
+        <name>Tabu 5 500</name>
+        <solver>
+            <localSearch>
+                <unionMoveSelector>
+                    <subListChangeMoveSelector />
+                    <listChangeMoveSelector />
+                    <listSwapMoveSelector />
+                </unionMoveSelector>
+                <acceptor>
+                    <valueTabuSize>5</valueTabuSize>
+                </acceptor>
+                <forager>
+                    <acceptedCountLimit>500</acceptedCountLimit>
+                </forager>
+            </localSearch>
+        </solver>
+    </solverBenchmark>
+    <solverBenchmark>
+        <name>Tabu 10 1000</name>
+        <solver>
+            <localSearch>
+                <unionMoveSelector>
+                    <subListChangeMoveSelector />
+                    <listChangeMoveSelector />
+                    <listSwapMoveSelector />
+                </unionMoveSelector>
+                <acceptor>
+                    <valueTabuSize>10</valueTabuSize>
+                </acceptor>
+                <forager>
+                    <acceptedCountLimit>1000</acceptedCountLimit>
+                </forager>
+            </localSearch>
+        </solver>
+    </solverBenchmark>
+    <solverBenchmark>
+        <name>LAHC 400</name>
+        <solver>
+            <localSearch>
+                <unionMoveSelector>
+                    <subListChangeMoveSelector />
+                    <listChangeMoveSelector />
+                    <listSwapMoveSelector />
+                </unionMoveSelector>
+                <acceptor>
+                    <lateAcceptanceSize>400</lateAcceptanceSize>
+                </acceptor>
+                <forager>
+                    <acceptedCountLimit>1</acceptedCountLimit>
+                </forager>
+            </localSearch>
+        </solver>
+    </solverBenchmark>
+    <solverBenchmark>
+        <name>LAHC 800</name>
+        <solver>
+            <localSearch>
+                <unionMoveSelector>
+                    <subListChangeMoveSelector />
+                    <listChangeMoveSelector />
+                    <listSwapMoveSelector />
+                </unionMoveSelector>
+                <acceptor>
+                    <lateAcceptanceSize>800</lateAcceptanceSize>
+                </acceptor>
+                <forager>
+                    <acceptedCountLimit>1</acceptedCountLimit>
+                </forager>
+            </localSearch>
+        </solver>
+    </solverBenchmark>
+</plannerBenchmark>

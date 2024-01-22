@@ -1,0 +1,141 @@
+{
+  "solutionId" : "1",
+  "score" : null,
+  "storageList" : [ {
+    "name" : "Storage #1",
+    "capacity" : 325,
+    "size" : 2,
+    "maxServingUnits" : 8000,
+    "initialOpeningCost" : 600,
+    "retails" : [ ],
+    "location" : {
+      "lat" : 5.324192291378981,
+      "lon" : 49.668488167601765
+    }
+  } ],
+  "locationList" : [ {
+    "lat" : 5.324192291378981,
+    "lon" : 49.668488167601765
+  }, {
+    "lat" : 71.07423877252175,
+    "lon" : 93.4844366002855
+  }, {
+    "lat" : 85.29420564472535,
+    "lon" : 21.61449529150469
+  }, {
+    "lat" : 15.882225911765923,
+    "lon" : 32.11687684609328
+  }, {
+    "lat" : 7.700434093837261,
+    "lon" : 58.65064752887261
+  }, {
+    "lat" : 57.74750191585484,
+    "lon" : 66.91395022027808
+  }, {
+    "lat" : 31.86899450411158,
+    "lon" : 19.061357617195707
+  }, {
+    "lat" : 60.90196214931344,
+    "lon" : 94.6804395545478
+  }, {
+    "lat" : 34.82554829112174,
+    "lon" : 81.61988229473303
+  }, {
+    "lat" : 2.336969518614307,
+    "lon" : 53.13576749049642
+  }, {
+    "lat" : 87.63377336918171,
+    "lon" : 50.833525989405146
+  } ],
+  "retailList" : [ {
+    "name" : "Retail store #1",
+    "capacity" : 1,
+    "location" : {
+      "lat" : 71.07423877252175,
+      "lon" : 93.4844366002855
+    },
+    "timeToServe" : 62,
+    "storage" : null
+  }, {
+    "name" : "Retail store #2",
+    "capacity" : 1,
+    "location" : {
+      "lat" : 85.29420564472535,
+      "lon" : 21.61449529150469
+    },
+    "timeToServe" : 33,
+    "storage" : null
+  }, {
+    "name" : "Retail store #3",
+    "capacity" : 1,
+    "location" : {
+      "lat" : 15.882225911765923,
+      "lon" : 32.11687684609328
+    },
+    "timeToServe" : 27,
+    "storage" : null
+  }, {
+    "name" : "Retail store #4",
+    "capacity" : 1,
+    "location" : {
+      "lat" : 7.700434093837261,
+      "lon" : 58.65064752887261
+    },
+    "timeToServe" : 57,
+    "storage" : null
+  }, {
+    "name" : "Retail store #5",
+    "capacity" : 1,
+    "location" : {
+      "lat" : 57.74750191585484,
+      "lon" : 66.91395022027808
+    },
+    "timeToServe" : 36,
+    "storage" : null
+  }, {
+    "name" : "Retail store #6",
+    "capacity" : 1,
+    "location" : {
+      "lat" : 31.86899450411158,
+      "lon" : 19.061357617195707
+    },
+    "timeToServe" : 72,
+    "storage" : null
+  }, {
+    "name" : "Retail store #7",
+    "capacity" : 1,
+    "location" : {
+      "lat" : 60.90196214931344,
+      "lon" : 94.6804395545478
+    },
+    "timeToServe" : 42,
+    "storage" : null
+  }, {
+    "name" : "Retail store #8",
+    "capacity" : 1,
+    "location" : {
+      "lat" : 34.82554829112174,
+      "lon" : 81.61988229473303
+    },
+    "timeToServe" : 37,
+    "storage" : null
+  }, {
+    "name" : "Retail store #9",
+    "capacity" : 1,
+    "location" : {
+      "lat" : 2.336969518614307,
+      "lon" : 53.13576749049642
+    },
+    "timeToServe" : 73,
+    "storage" : null
+  }, {
+    "name" : "Retail store #10",
+    "capacity" : 1,
+    "location" : {
+      "lat" : 87.63377336918171,
+      "lon" : 50.833525989405146
+    },
+    "timeToServe" : 37,
+    "storage" : null
+  } ]
+}

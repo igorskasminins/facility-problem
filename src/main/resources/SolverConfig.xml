@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<solver xmlns="https://timefold.ai/xsd/solver" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://timefold.ai/xsd/solver https://timefold.ai/xsd/solver/solver.xsd">
+    <environmentMode>FAST_ASSERT</environmentMode>
+
+    <!-- Define the model -->
+    <solutionClass>problem.loc.facility.domain.FacilitySolution</solutionClass>
+    <entityClass>problem.loc.facility.domain.Storage</entityClass>
+    <entityClass>problem.loc.facility.domain.Retail</entityClass>
+
+    <!-- Define the score function -->
+    <scoreDirectorFactory>
+        <constraintProviderClass>problem.loc.facility.solver.StreamCalculator</constraintProviderClass>
+    </scoreDirectorFactory>
+
+    <!-- Configure the optimization algorithms (optional) -->
+    <termination>
+        <secondsSpentLimit>5</secondsSpentLimit>
+    </termination>
+
+    <constructionHeuristic/>
+
+    <localSearch>
+        <acceptor>
+            <entityTabuSize>10</entityTabuSize>
+        </acceptor>
+        <forager>
+            <acceptedCountLimit>10</acceptedCountLimit>
+        </forager>
+    </localSearch>
+</solver>
